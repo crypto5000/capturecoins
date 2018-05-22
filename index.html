@@ -82,27 +82,27 @@
           </ul>                                       
             <div class="form-group row" id="openChallenges" style="display:none">                                                
               <div class="col-lg-12">
-                <a href="#" class="goLink" id="challenge0" style="display:none;word-break:break-all;"></a>                                    
-                <a href="#" class="goLink" id="challenge1" style="display:none;word-break:break-all;"></a>                                    
-                <a href="#" class="goLink" id="challenge2" style="display:none;word-break:break-all;"></a>                                    
-                <a href="#" class="goLink" id="challenge3" style="display:none;word-break:break-all;"></a>                                    
-                <a href="#" class="goLink" id="challenge4" style="display:none;word-break:break-all;"></a>                                    
-                <a href="#" class="goLink" id="challenge5" style="display:none;word-break:break-all;"></a>                                    
-                <a href="#" class="goLink" id="challenge6" style="display:none;word-break:break-all;"></a>                                    
-                <a href="#" class="goLink" id="challenge7" style="display:none;word-break:break-all;"></a>                                    
-                <a href="#" class="goLink" id="challenge8" style="display:none;word-break:break-all;"></a>                                    
-                <a href="#" class="goLink" id="challenge9" style="display:none;word-break:break-all;"></a>                                    
-                <a href="#" class="goLink" id="challenge10" style="display:none;word-break:break-all;"></a>                                    
-                <a href="#" class="goLink" id="challenge11" style="display:none;word-break:break-all;"></a>                                    
-                <a href="#" class="goLink" id="challenge12" style="display:none;word-break:break-all;"></a>                                    
-                <a href="#" class="goLink" id="challenge13" style="display:none;word-break:break-all;"></a>                                    
-                <a href="#" class="goLink" id="challenge14" style="display:none;word-break:break-all;"></a>                                    
-                <a href="#" class="goLink" id="challenge15" style="display:none;word-break:break-all;"></a>                                    
-                <a href="#" class="goLink" id="challenge16" style="display:none;word-break:break-all;"></a>                                    
-                <a href="#" class="goLink" id="challenge17" style="display:none;word-break:break-all;"></a>                                    
-                <a href="#" class="goLink" id="challenge18" style="display:none;word-break:break-all;"></a>                                    
-                <a href="#" class="goLink" id="challenge19" style="display:none;word-break:break-all;"></a>                                    
-                <a href="#" class="goLink" id="challenge20" style="display:none;word-break:break-all;"></a>                                                    
+                <a href="#" class="goLink" id="challenge0" style="display:none;word-break:break-all;color:white"></a>                                    
+                <a href="#" class="goLink" id="challenge1" style="display:none;word-break:break-all;color:white"></a>                                    
+                <a href="#" class="goLink" id="challenge2" style="display:none;word-break:break-all;color:white"></a>                                    
+                <a href="#" class="goLink" id="challenge3" style="display:none;word-break:break-all;color:white"></a>                                    
+                <a href="#" class="goLink" id="challenge4" style="display:none;word-break:break-all;color:white"></a>                                    
+                <a href="#" class="goLink" id="challenge5" style="display:none;word-break:break-all;color:white"></a>                                    
+                <a href="#" class="goLink" id="challenge6" style="display:none;word-break:break-all;color:white"></a>                                    
+                <a href="#" class="goLink" id="challenge7" style="display:none;word-break:break-all;color:white"></a>                                    
+                <a href="#" class="goLink" id="challenge8" style="display:none;word-break:break-all;color:white"></a>                                    
+                <a href="#" class="goLink" id="challenge9" style="display:none;word-break:break-all;color:white"></a>                                    
+                <a href="#" class="goLink" id="challenge10" style="display:none;word-break:break-all;color:white"></a>                                    
+                <a href="#" class="goLink" id="challenge11" style="display:none;word-break:break-all;color:white"></a>                                    
+                <a href="#" class="goLink" id="challenge12" style="display:none;word-break:break-all;color:white"></a>                                    
+                <a href="#" class="goLink" id="challenge13" style="display:none;word-break:break-all;color:white"></a>                                    
+                <a href="#" class="goLink" id="challenge14" style="display:none;word-break:break-all;color:white"></a>                                    
+                <a href="#" class="goLink" id="challenge15" style="display:none;word-break:break-all;color:white"></a>                                    
+                <a href="#" class="goLink" id="challenge16" style="display:none;word-break:break-all;color:white"></a>                                    
+                <a href="#" class="goLink" id="challenge17" style="display:none;word-break:break-all;color:white"></a>                                    
+                <a href="#" class="goLink" id="challenge18" style="display:none;word-break:break-all;color:white"></a>                                    
+                <a href="#" class="goLink" id="challenge19" style="display:none;word-break:break-all;color:white"></a>                                    
+                <a href="#" class="goLink" id="challenge20" style="display:none;word-break:break-all;color:white"></a>                                                    
               </div>                                    
             </div>                                    
         </div>
@@ -218,9 +218,9 @@
         });  	                                     
 
         // data from the Tangle
-        let fetchArray = [];
-        let question1Array = []; 
-        let question2Array = []; 
+        let fetchArray = [''];
+        let question1Array = ['']; 
+        let question2Array = ['']; 
         let link1Array = [];
         let link2Array = [];
 
@@ -283,7 +283,7 @@
                   data:  JSON.stringify(command),
                   processData: false,
                   success: function (datain) {
-                      
+
                       // process the results
                       if ((datain.balances) && (parseInt(datain.balances.length) === challengeCount)) {
                         
@@ -321,7 +321,7 @@
                       
                   },
                   error: function(){
-                      
+
                       // show no results
                       $("#pleaseWait").fadeOut("slow");
                       $("#mainButtons").fadeOut("slow");
@@ -351,7 +351,7 @@
 
               // check that results exist                  
               if (e) {
-                  
+
                   // show no results
                   $("#pleaseWait").fadeOut("slow");
                   $("#mainButtons").fadeOut("slow");
@@ -359,7 +359,7 @@
                   $("#noChallenges").fadeIn("slow");              
                   return false;
               } else if (!addressData) {                  
-                  
+
                   // show no results
                   $("#pleaseWait").fadeOut("slow");
                   $("#mainButtons").fadeOut("slow");
@@ -399,8 +399,8 @@
                       var m = 0;
                       while (m < openArray.length) {
                         // display the hash as text, show the result
-                        $("#challenge" + count).text("Challenge: " + filterXSS(openArray[count]));
-                        $("#challenge" + count).show();
+                        $("#challenge" + m).text("Challenge: " + filterXSS(openArray[m]));
+                        $("#challenge" + m).show();
                         m++;
                       }
                       
@@ -457,8 +457,8 @@
           }          
 
           // pull the question hashes from the challenge hash
-          let question1Hash = link1Array[challengeHash];
-          let question2Hash = link2Array[challengeHash];
+          let question1Hash = link1Array[challengeAddress];
+          let question2Hash = link2Array[challengeAddress];
 
           // filter for XSS
           question1Hash = filterXSS(question1Hash);                  
