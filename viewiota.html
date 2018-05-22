@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Capture Coins is a skill-based challenge where you answer questions to find a wallet's seed.">
+    <meta name="author" content="Capture Coins">
+
+    <title>Capture the Coins - View Challenge</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/portfolio-item.css" rel="stylesheet">
+    <link href="css/modern-business.css" rel="stylesheet">
+    <link href="css/2-col-portfolio.css" rel="stylesheet">      
+    <link rel="icon" href="./img/favicon.ico" />	
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119562302-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-119562302-1');
+    </script>
+    
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="./index.html">Capture Coins</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            Solve the Challenge. Capture the Coins.
+          </li>          
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="intro-header">
+      <div class="container">
+        <div class="intro-message">          
+          <br><br>  
+          <h2 style="padding-bottom:10px;" id="fetchWarning">                                                    
+            <img id="loading" src="./img/loading.gif" alt="loading" height="40" width="40">&nbsp;&nbsp;&nbsp;<div id="loadingText" style="display:inline">Please Wait. Connecting to the Tangle.</div>                    
+          </h2>            
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question1"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question2"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question3"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question4"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question5"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question6"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question7"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question8"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question9"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question10"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question11"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question12"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question13"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question14"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question15"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question16"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question17"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question18"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question19"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question20"></h2>                              
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question21"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question22"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question23"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question24"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question25"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question26"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question27"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question28"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question29"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question30"></h2>                              
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question31"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question32"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question33"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question34"></h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question35"></h2>                    
+          <div class="endQuestion" style="display:none;">
+            <h2 style="padding-bottom:10px;display:none;" class="question seedGuess">Your seed guess is:<br><code class="seedGuess" id="seed" style="display:inline-block;word-break:break-all;"></code><h5 class="seedGuess">Check the wallet or try again. To recover from recent snapshots, make sure to generate 1 address.</h5></h2>                                
+          </div>
+            <hr class="intro-divider">          
+          <input type="hidden" val="" id="answer1Text">
+          <input type="hidden" val="" id="answer2Text">
+          <input type="hidden" val="" id="answer3Text">
+          <input type="hidden" val="" id="answer4Text">
+          <input type="hidden" val="" id="answer5Text">
+          <input type="hidden" val="" id="answer6Text">
+          <input type="hidden" val="" id="answer7Text">
+          <input type="hidden" val="" id="answer8Text">
+          <input type="hidden" val="" id="answer9Text">
+          <input type="hidden" val="" id="answer10Text">
+          <input type="hidden" val="" id="answer11Text">
+          <input type="hidden" val="" id="answer12Text">
+          <input type="hidden" val="" id="answer13Text">
+          <input type="hidden" val="" id="answer14Text">
+          <input type="hidden" val="" id="answer15Text">
+          <input type="hidden" val="" id="answer16Text">
+          <input type="hidden" val="" id="answer17Text">
+          <input type="hidden" val="" id="answer18Text">
+          <input type="hidden" val="" id="answer19Text">
+          <input type="hidden" val="" id="answer20Text">
+          <input type="hidden" val="" id="answer21Text">
+          <input type="hidden" val="" id="answer22Text">
+          <input type="hidden" val="" id="answer23Text">
+          <input type="hidden" val="" id="answer24Text">
+          <input type="hidden" val="" id="answer25Text">
+          <input type="hidden" val="" id="answer26Text">
+          <input type="hidden" val="" id="answer27Text">
+          <input type="hidden" val="" id="answer28Text">
+          <input type="hidden" val="" id="answer29Text">
+          <input type="hidden" val="" id="answer30Text">
+          <input type="hidden" val="" id="answer31Text">
+          <input type="hidden" val="" id="answer32Text">
+          <input type="hidden" val="" id="answer33Text">
+          <input type="hidden" val="" id="answer34Text">
+          <input type="hidden" val="" id="answer35Text">
+          <ul class="list-inline intro-social-buttons">            
+            <div class="form-group row formInputs" id="answerGroup" style="display:none">                                                    
+                <div class="col-lg-12">                  
+                    <input class="form-control" id="answer" style="width:80%;margin: 0 auto;" type="text" value="" placeholder="Enter Answer">
+                </div>                    
+                <div class="col-lg-12">
+                    <button type="submit" class="btn btn-primary" id="backButton" style="border-style:solid;border-color: #ffffff;margin-top:10px;margin-right:10px">Back</button>                                                                                                                            
+                    <button type="submit" class="btn btn-primary" id="nextButton" style="border-style:solid;border-color: #ffffff;margin-top:10px;margin-left:10px">Next</button>                                                                                    
+                </div>                    
+                <div class="col-lg-12">                  
+                    <h5 style="padding-top:10px;" class="seedGuessShow">Current Seed Guess: <code id="seedShow" style="display:inline-block;word-break:break-all;"></code></h5>                    
+                </div>                    
+            </div>                                 
+            <div class="end" id="playReal" style="display:none">                                      
+                <button type="submit" class="btn btn-primary" id="createButton" style="border-style:solid;border-color: #ffffff;width:100%;margin-top:10px"><h3 style="margin-top:5px;">Create a Challenge</h3></button><br>                                                                                                        
+                <button type="submit" class="btn btn-primary" id="tryAgainButton" style="border-style:solid;border-color: #ffffff;width:100%;margin-top:10px"><h3 style="margin-top:5px;">Try Again</h3></button>                                                                                                                  
+            </div>                                                                
+          </ul>                    
+        </div>
+      </div>
+    </header>    
+        
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/iota.view.min.js"></script>   
+    <script type="text/javascript" src="js/xss.js"></script>
+    
+    <!-- Page-Level Demo Scripts -->
+    <script>
+    $(document).ready(function() {        
+        
+        // set up the initial question number, max questions        
+        let questionNumber = 1;
+        let maxQuestion = 35;
+        $(".seedGuessShow").hide(); 
+
+        // get the data from the url
+        var transaction = "";
+        var address = "";
+        var url_string = window.location.href
+        var url = new URL(url_string);
+        transaction = url.searchParams.get("q");    
+        address = url.searchParams.get("r");    
+        var validFlag = true;
+
+        // sanitize html
+        transaction = filterXSS(transaction);            
+        address = filterXSS(address);            
+
+        // validate the data
+        validateData(transaction,address);
+        
+        function validateData(transaction,address) {
+            
+            // check if field has transaction
+            if (!transaction) {
+                validFlag = false;
+                alert("Transaction hash is invalid. Challenge not found in the Tangle.");                                        
+                // go to home page
+                let url = "./index.html";
+                window.location.href = url;            
+                return false;
+            }
+
+            // validate the transaction length             
+            if (transaction.length !== 81) {
+                validFlag = false;
+                alert("Transaction hash is invalid. Challenge not found in the Tangle.");                                        
+                // go to home page
+                let url = "./index.html";
+                window.location.href = url;                                            
+                return false;
+            }
+
+            // validate the transaction content
+            for (var j = 0; j < transaction.length; j++) {
+                if (("9ABCDEFGHIJKLMNOPQRSTUVWXYZ").indexOf(transaction.charAt(j)) < 0) {                            
+                  validFlag = false;
+                  alert("Transaction hash is invalid. Challenge not found in the Tangle.");                                        
+                  // go to home page
+                  let url = "./index.html";
+                  window.location.href = url;                            
+                  return false;
+                }
+            }
+
+            // check if field has address
+            if (!address) {
+                validFlag = false;
+                alert("Address is invalid. Challenge not found in the Tangle.");                                        
+                // go to home page
+                let url = "./index.html";
+                window.location.href = url;            
+                return false;
+            }
+
+            // validate the address length             
+            if ((address.length === 90) || (address.length === 81)) {
+                // do nothing
+            } else {
+                validFlag = false;
+                alert("Address is invalid. Challenge not found in the Tangle.");                                        
+                // go to home page
+                let url = "./index.html";
+                window.location.href = url;                            
+                return false;
+            }
+
+            // validate the address content
+            for (var j = 0; j < address.length; j++) {
+                if (("9ABCDEFGHIJKLMNOPQRSTUVWXYZ").indexOf(address.charAt(j)) < 0) {                            
+                  validFlag = false;
+                  alert("Address is invalid. Challenge not found in the Tangle.");                                        
+                  // go to home page
+                  let url = "./index.html";
+                  window.location.href = url;                            
+                  return false;
+                }
+            }
+            
+        }
+
+        // initialize object to start data fetch
+        var iota = new IOTA({
+            'host': 'https://nodes.iota.cafe',
+            'port': 443
+        });
+
+        // // pull the challenge
+        if ((validFlag) && (address.length > 1)) {
+            fetchChallenge(transaction,address);
+        }
+
+        function fetchChallenge(transaction,address) {                
+
+            // set the address
+            var command = {            
+                'addresses': [address]                                                
+            }                        
+
+            // fetch the data for all transactions involving address in tangle
+            iota.api.findTransactionObjects(command, function(e, addressData) {            
+
+                // check that results exist                  
+                if (!addressData) {
+                    // display no challenge found in tangle,            
+                    console.log("no data found");
+                    alert("The challenge was not found in the Tangle. Try a different challenge.");
+                    // go to home page
+                    let url = "./index.html";
+                    window.location.href = url;                            
+                    return false;
+                } else {                    
+                    // initialize values                    
+                    var i = 0;                          
+                    var cMessage = "";
+                    var challengeCount = 0;
+                    var balValue = 0;                        
+                    
+                    // cycle through the address elements
+                    while (i < addressData.length) {
+                        
+                        // check the transaction is valid
+                        if (addressData[i].hash == transaction) {
+
+                            // element is a challenge, set current values                 
+                            balValue = addressData[i].value;
+
+                            // check if data only and message exists
+                            if (balValue === 0) { 
+
+                                // check message exists (not just 99999s)
+                                if (addressData[i].signatureMessageFragment === "999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999") {
+
+                                    // do nothing - not a valid item message
+                                
+                                } else {
+
+                                    // set as a challenge
+                                    cMessage = addressData[i].signatureMessageFragment;                                    
+
+                                    // increment number of challenges found
+                                    challengeCount++;
+                                    
+                                }                              
+
+                            } else {
+
+                                // skip transaction - not pure data                
+
+                            }
+                      
+                        } else {
+
+                            // skip - not valid transaction
+
+                        }
+
+                        i++;
+                    }
+
+                    // display the challenge
+                    if (challengeCount < 1) {
+
+                        alert("The challenge was not found in the Tangle. Try a different challenge.");
+                        // go to home page
+                        let url = "./index.html";
+                        window.location.href = url;                            
+                        return false;
+
+                    } else {
+
+                        // initialize variables
+                        let totalLength = 0;
+                        let tempEnd = totalLength;
+                        let countPos = totalLength;
+                        let newMessage = "";
+                        let convertMessage = "";
+                        let stopPos = 0;                            
+                        let questions = "";                    
+                        
+                        // parse the message for questions in the challenge
+                        if (cMessage.length > 1) {                 
+
+                            // cut off trailing 9's from message signature
+                            totalLength = cMessage.length;                        
+                            tempEnd = totalLength;
+                            countPos = totalLength;
+                            newMessage = "";
+                    
+                            while (countPos > 0) {
+                    
+                                if (cMessage.substring(tempEnd - 1, tempEnd) == "9") {
+                                    // update tempEnd
+                                    tempEnd = tempEnd - 1;                
+                                } else {
+                                    // found all 999's
+                                    newMessage = cMessage.substring(0, countPos);
+                                    break;
+                                }
+                                countPos--;
+                            }
+
+                            // convert the new message from trytes
+                            convertMessage = iota.utils.fromTrytes(newMessage);
+
+                            // parse off the stop mark
+                            stopPos = convertMessage.indexOf("???");                                                                                            
+
+                            // set the question
+                            questions = convertMessage.substring(0,stopPos + 1);
+                            
+                            // sanitize values
+                            questions = filterXSS(questions);
+                                                        
+                            // get the count of questions
+                            let questionCount = (questions.match(/\?/g) || []).length;
+
+                            // check for no questions
+                            if (questionCount < 1) {
+                              alert("The challenge was not found in the Tangle. Try a different challenge.");
+                              // go to home page
+                              let url = "./index.html";
+                              window.location.href = url;                            
+                              return false;
+                            }
+
+                            // update the max questions to question count
+                            maxQuestion = questionCount;
+                            
+                            // explode the string into questions                            
+                            let questionArray = questions.split("?");
+                            
+                            // set question display
+                            let b = 0;
+                            let c = 1;
+                            let tempQuestion = "";
+                            while (b < questionCount) {
+
+                              // set the questions
+                              tempQuestion = filterXSS(questionArray[b]);
+                              $("#question" + c).text(tempQuestion + "?");                            
+
+                              b++;
+                              c++;                            
+                            
+                            }
+
+                            // hide the fetch text
+                            $("#fetchWarning").fadeOut("slow");
+
+                            // show first question, hide others
+                            $(".question").hide();
+                            $(".end").fadeOut("slow");
+                            $(".endQuestion").fadeOut("slow");                            
+                            $("#question1").fadeIn("slow");
+                            $("#answerGroup").fadeIn("slow");
+                            
+                        }                                
+
+                    }                    
+                                                            
+                }                
+
+            })                
+
+        }           
+                                            
+        // handle the answer being submitted
+        $("#nextButton").on( "click", function() {		
+
+            // hide the  warning and all questions
+            $("#fetchWarning").fadeOut("slow");
+            $(".question").fadeOut("slow");
+            $("#answerGroup").fadeOut("slow");
+
+            // validate the answer
+            let currentAnswer = $("#answer").val().trim();
+            currentAnswer = filterXSS(currentAnswer);
+
+            if (!currentAnswer) {
+                alert("Please enter an answer. Answer should contain only letters A-Z or the number 9.");                                        
+                // show question
+                $("#question" + questionNumber).fadeIn("slow");
+                $("#answerGroup").fadeIn("slow");
+                return false;
+            }
+
+            if (currentAnswer.length < 1) {
+                alert("Please enter an answer. Answer should contain only letters A-Z or the number 9.");                                        
+                // show question
+                $("#question" + questionNumber).fadeIn("slow");
+                $("#answerGroup").fadeIn("slow");
+                return false;
+            }
+
+            // validate the answer content
+            for (var j = 0; j < currentAnswer.length; j++) {
+                if (("9ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz").indexOf(currentAnswer.charAt(j)) < 0) {                            
+                    alert("Answer should contain only letters A-Z or the number 9.");                                        
+                    // show question
+                    $("#question" + questionNumber).fadeIn("slow");
+                    $("#answerGroup").fadeIn("slow");
+                    return false;
+                }
+            }
+
+            // set the answer text for current question 
+            $("#answer" + questionNumber + "Text").val(currentAnswer);
+          
+             // set the guess seed
+            let guess = $("#answer1Text").val();
+            guess = filterXSS(guess);
+            let i = 2;
+            while (i <= maxQuestion) {
+              guess = guess + $("#answer" + i + "Text").val();  
+              guess = filterXSS(guess);
+              i++;
+            }              
+            guess = guess.toUpperCase();
+            $("#seed").text(guess); 
+            $("#seedShow").text(guess); 
+
+            if (guess.length > 0) {
+              $(".seedGuessShow").show(); 
+            } else {
+              $(".seedGuessShow").hide(); 
+            }
+
+            // increment the question number
+            questionNumber = questionNumber + 1;
+
+            // check if last question
+            if (questionNumber > maxQuestion) {
+
+              // last question, show guess              
+              $("#answerGroup").fadeOut("slow");
+              $(".endQuestion").fadeIn("slow");
+              $(".end").fadeIn("slow");
+              $(".seedGuess").fadeIn("slow");
+              $("#seedEnd").fadeIn("slow");
+              
+            } else {
+
+              // show next question, clear answer
+              $("#question" + questionNumber).fadeIn("slow");
+              $("#answerGroup").fadeIn("slow");
+              $("#answer").val("");
+
+            }
+
+            return false;
+            
+        });  	                     
+
+        // handle the back button
+        $("#backButton").on( "click", function() {		
+
+            // check if first question
+            if (questionNumber <= 1) {
+
+              // set to first question
+              questionNumber = 1;
+              alert("You are at the first question. There are no previous questions.");
+              return false;
+
+            } else {
+
+              // check if after last question
+              if (questionNumber >= maxQuestion) {
+
+                // set to last question
+                questionNumber = maxQuestion;
+
+                // hide end                
+                $(".end").fadeOut("slow");
+                $(".question").fadeOut("slow");
+
+                // show last question
+                $("#question" + questionNumber).fadeIn("slow");
+                $("#answerGroup").fadeIn("slow");
+
+              } else {
+
+                // decrement question
+                questionNumber = questionNumber - 1;
+
+                // clear answer, roll back question
+                $("#answer").val("");
+                $(".question").fadeOut("slow");
+                $("#question" + questionNumber).fadeIn("slow");
+
+              }
+
+            }
+            
+            return false;
+            
+        });  	                                      
+         
+        // handle the create a challenge
+        $("#createButton").on( "click", function() {		
+
+           // go to create page
+            let url = "./createiota.html";
+            window.location.href = url;            
+
+            return false;
+            
+        });  	                                             
+
+        // handle the try again
+        $("#tryAgainButton").on( "click", function() {		
+
+            // reload the page            
+            location.reload();         
+
+            return false;
+            
+        });  	                                             
+
+    });	
+
+    </script>
+	
+  </body>
+  
+</html>

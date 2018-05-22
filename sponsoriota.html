@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Capture Coins is a skill-based challenge where you answer questions to find a wallet's seed.">
+    <meta name="author" content="Capture Coins">
+
+    <title>Capture the Coins - Sponsor Challenge</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/portfolio-item.css" rel="stylesheet">
+    <link href="css/modern-business.css" rel="stylesheet">
+    <link href="css/2-col-portfolio.css" rel="stylesheet">      
+    <link rel="icon" href="./img/favicon.ico" />	
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119562302-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-119562302-1');
+    </script>
+    
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="./index.html">Capture Coins</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            Solve the Challenge. Capture the Coins.
+          </li>          
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="intro-header">
+      <div class="container">
+        <div class="intro-message">          
+          <br><br>  
+          <h2 style="padding-bottom:10px;" class="createStart">How to sponsor a challenge:</h2>                              
+          <h2 style="padding-bottom:10px;display:none" class="step1">Step 1: Enter Basic Information About Your Challenge</h2>                                        
+          <h2 style="padding-bottom:10px;display:none" class="step2">Step 2: Create a Seed Made of Brand Related Words</h2>                              
+          <h2 style="padding-bottom:10px;display:none" class="step3">Step 3: Create All the Questions and Then Upload to Tangle</h2>                              
+          <h3 style="padding-bottom:10px;" class="createStart"><code>1) Enter basic information about your challenge.</code></h3>                    
+          <h3 style="padding-bottom:10px;" class="createStart"><code>2) Create a seed made of brand related words.</code></h3>                   
+          <h3 style="padding-bottom:10px;" class="createStart"><code>3) Upload the questions to solve the seed into the Tangle.</code></h3>                    
+          <h3 style="padding-bottom:10px;display:none" class="step1">Enter the sponsor and description of challenge. Only letters, numbers, dots, and spaces. Max of 250 characters each.</h3>                    
+          <h3 class="page-header sendQuestions" style="display:none">
+              <img id="loading" src="./img/loading.gif" alt="loading" height="40" width="40">&nbsp;&nbsp;&nbsp;<div id="loadingText" style="display:inline">Please Wait. Connecting to the Tangle.</div>                    
+          </h3>            
+          <div class="col-lg-12 step1" style="display:none">           
+              <form class="form-horizontal">
+                  <fieldset>
+                      <div class="form-group">                                                          
+                          <div class="col-xs-10">
+                              <input type="text" class="form-control" style="width:80%;margin: 0 auto;" id="sponsor" placeholder="Your business name or your website">
+                          </div>                                        
+                      </div>                                          
+                  </fieldset>
+                  <fieldset>
+                    <div class="form-group">                                                          
+                        <div class="col-xs-10">
+                            <input type="text" class="form-control" style="width:80%;margin: 0 auto;" id="sponsordesc" placeholder="How correct seed can be used (e.g. 5 percent discount)...">
+                        </div>                                        
+                    </div>                                          
+                </fieldset>
+              </form>
+          </div>                        
+          <h3 style="padding-bottom:10px;display:none" class="step2"><code>Your words should contain only the letters A-Z and the number 9.</code></h3> 
+          <h3 style="padding-bottom:10px;display:none" class="step2"><code>You should create this seed outside of Capture Coins.</code></h3>
+          <h3 style="padding-bottom:10px;display:none" class="step2"><code>Keep the seed private and do not share it with anyone (not even Capture Coins)!</code></h3>                                        
+          <div class="col-lg-12 step3" style="display:none">
+              <input type="hidden" id="taskCount" value="0">
+              <h6>Enter each question separately. Questions should end with a "?" (question mark). 2100 characters max.</h6>
+              <div class="form-group row" id="qGroup1">
+                  <div class="col-lg-12">                 
+                      <input class="form-control" id="question1" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #1 for Word #1 in Your Seed">
+                  </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup2" style="display:none">
+                  <div class="col-lg-12">                 
+                      <input class="form-control" id="question2" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #2 for Word #2 in Your Seed">
+                  </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup3" style="display:none">
+                  <div class="col-lg-12">                 
+                      <input class="form-control" id="question3" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #3 for Word #3 in Your Seed">
+                  </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup4" style="display:none">
+                <div class="col-lg-12">                 
+                    <input class="form-control" id="question4" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #4 for Word #4 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup5" style="display:none">
+                <div class="col-lg-12">                 
+                    <input class="form-control" id="question5" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #5 for Word #5 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup6" style="display:none">
+                <div class="col-lg-12">                 
+                    <input class="form-control" id="question6" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #6 for Word #6 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup7" style="display:none">
+                <div class="col-lg-12">                 
+                    <input class="form-control" id="question7" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #7 for Word #7 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup8" style="display:none">
+                <div class="col-lg-12">                 
+                    <input class="form-control" id="question8" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #8 for Word #8 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup9" style="display:none">
+                <div class="col-lg-12">                 
+                    <input class="form-control" id="question9" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #9 for Word #9 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup10" style="display:none">
+                <div class="col-lg-12">                 
+                    <input class="form-control" id="question10" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #10 for Word #10 in Your Seed">
+                </div>                  
+              </div>                                          
+              <div class="form-group row" id="qGroup11" style="display:none">
+                <div class="col-lg-12">                 
+                    <input class="form-control" id="question11" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #11 for Word #11 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup12" style="display:none">
+                <div class="col-lg-12">                 
+                    <input class="form-control" id="question12" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #12 for Word #12 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup13" style="display:none">
+                <div class="col-lg-12">                 
+                    <input class="form-control" id="question13" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #13 for Word #13 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup14" style="display:none">
+                <div class="col-lg-12">                 
+                  <input class="form-control" id="question14" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #14 for Word #14 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup15" style="display:none">
+                <div class="col-lg-12">                 
+                  <input class="form-control" id="question15" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #15 for Word #15 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup16" style="display:none">
+                <div class="col-lg-12">                 
+                  <input class="form-control" id="question16" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #16 for Word #16 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup17" style="display:none">
+                <div class="col-lg-12">                 
+                  <input class="form-control" id="question17" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #17 for Word #17 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup18" style="display:none">
+                <div class="col-lg-12">                 
+                  <input class="form-control" id="question18" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #18 for Word #18 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup19" style="display:none">
+                <div class="col-lg-12">                 
+                  <input class="form-control" id="question19" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #19 for Word #19 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup20" style="display:none">
+                <div class="col-lg-12">                 
+                  <input class="form-control" id="question20" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #20 for Word #20 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup21" style="display:none">
+                <div class="col-lg-12">                 
+                    <input class="form-control" id="question21" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #21 for Word #21 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup22" style="display:none">
+                <div class="col-lg-12">                 
+                    <input class="form-control" id="question22" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #22 for Word #22 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup23" style="display:none">
+                <div class="col-lg-12">                 
+                    <input class="form-control" id="question23" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #23 for Word #23 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup24" style="display:none">
+                <div class="col-lg-12">                 
+                    <input class="form-control" id="question24" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #24 for Word #24 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup25" style="display:none">
+                <div class="col-lg-12">                 
+                    <input class="form-control" id="question25" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #25 for Word #25 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup26" style="display:none">
+                <div class="col-lg-12">                 
+                    <input class="form-control" id="question26" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #26 for Word #26 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup27" style="display:none">
+                <div class="col-lg-12">                 
+                    <input class="form-control" id="question27" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #27 for Word #27 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup28" style="display:none">
+                <div class="col-lg-12">                 
+                    <input class="form-control" id="question28" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #28 for Word #28 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup29" style="display:none">
+                <div class="col-lg-12">                 
+                    <input class="form-control" id="question29" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #29 for Word #29 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup30" style="display:none">
+                <div class="col-lg-12">                 
+                    <input class="form-control" id="question30" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #30 for Word #30 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup31" style="display:none">
+                <div class="col-lg-12">                 
+                    <input class="form-control" id="question31" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #31 for Word #31 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup32" style="display:none">
+                <div class="col-lg-12">                 
+                    <input class="form-control" id="question32" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #32 for Word #32 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup33" style="display:none">
+                <div class="col-lg-12">                 
+                    <input class="form-control" id="question33" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #33 for Word #33 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup34" style="display:none">
+                <div class="col-lg-12">                 
+                    <input class="form-control" id="question34" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #34 for Word #34 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group row" id="qGroup35" style="display:none">
+                <div class="col-lg-12">                 
+                    <input class="form-control" id="question35" style="width:80%;margin: 0 auto;" type="text" placeholder="Question #35 for Word #35 in Your Seed">
+                </div>                  
+              </div>                            
+              <div class="form-group text-center">                        
+                  <button type="submit" class="btn btn-primary" id="addButton">Add Another Question</button>                                                      
+                  <button type="submit" class="btn btn-primary" id="removeButton">Remove Last Question</button>                                                      
+              </div>
+          </div>                
+          <ul class="list-inline intro-social-buttons">            
+            <div id="start">                    
+                <button type="submit" class="btn btn-primary" id="startButton" style="border-style:solid;border-color: #ffffff;"><h3 style="margin-top:5px;">Let's Create a Challenge. I'm Ready.</h3></button>                                                                                                        
+                <button type="submit" class="btn btn-primary" id="step1Button" style="border-style:solid;border-color: #ffffff;display:none"><h3 style="margin-top:5px;">Let's Move on to Creating a Seed.</h3></button>                                                                                                        
+                <button type="submit" class="btn btn-primary" id="step2Button" style="border-style:solid;border-color: #ffffff;display:none"><h3 style="margin-top:5px;">I've Got My Seed. Let's Go to Step 3</h3></button>                                                                                                        
+                <button type="submit" class="btn btn-primary" id="step3Button" style="border-style:solid;border-color: #ffffff;display:none"><h3 style="margin-top:5px;">I'm Finished. Send All Questions to Tangle.</h3></button>                                                                                                        
+            </div>                                             
+          </ul>                    
+        </div>
+      </div>
+    </header>   
+       
+    <!-- Internet Explorer and Mobile Check-->
+    <script type="text/javascript">
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf("MSIE ");
+        // redirect to no curl
+        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {        
+              console.log("curl not supported in ie");                          
+              let url = "./nocurl.html";
+              window.location.href = url;                          
+        }        
+    </script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/xss.js"></script>
+    <script type="text/javascript" src="js/iota.curl.min.js"></script>   
+    <script type="text/javascript" src="js/curl.min.js"></script>
+        
+    <!-- Page-Level Demo Scripts -->
+    <script>
+    $(document).ready(function() {        
+        
+        // check that curl library is supported with webgl2
+        try {
+              curl;                                        
+        } catch(err){
+              console.log("curl not supported",err);                          
+              let url = "./nocurl.html";
+              window.location.href = url;            
+              return false;
+        }
+                        
+        // set the initial question display
+        let questionDisplay = 1;
+
+        // set the initial sponsor and sponsor desc
+        let sponsor = "";
+        let sponsordesc = "";
+
+        // handle the start button
+        $("#startButton").on( "click", function() {		
+          
+          // hide the start, show step1
+          $("#startButton").fadeOut("slow");
+          $(".createStart").fadeOut("slow");
+          $(".step1").fadeIn("slow");
+          $("#step1Button").fadeIn("slow");
+
+          return false;
+          
+        });  	                                     
+
+        // handle the step1 button
+        $("#step1Button").on( "click", function() {		
+          
+          // get the sponsor and sponsor desc
+          sponsor = $("#sponsor").val();
+          sponsordesc = $("#sponsordesc").val();
+
+          // validate html
+          sponsor = filterXSS(sponsor);
+          sponsordesc = filterXSS(sponsordesc);
+
+          // check sponsor exists
+          if (!sponsor) {
+              alert("Sponsor is invalid. Please enter a value.");                                        
+              return false;
+          }
+
+          // validate the sponsor length             
+          if (sponsor.length < 1) {
+              alert("Sponsor is invalid. Enter more than 1 character.");                                        
+              return false;
+          }
+
+          // validate the sponsor length             
+          if (sponsor.length > 250) {
+              alert("Sponsor is invalid. Enter less than 250 characters.");                                        
+              return false;
+          }
+
+          // validate the sponsor content
+          for (var j = 0; j < sponsor.length; j++) {
+            if (("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890. ").indexOf(sponsor.charAt(j)) < 0) {                            
+                  alert("Sponsor should contain only letters, numbers, dots or spaces.");                                        
+                  return false;
+              }
+          }                    
+
+          // check sponsor description exists
+          if (!sponsordesc) {
+              alert("Sponsor description is invalid. Please enter a value.");                                        
+              return false;
+          }
+
+          // validate the sponsor description length             
+          if (sponsordesc.length < 1) {
+              alert("Sponsor description is invalid. Enter more than 1 character.");                                        
+              return false;
+          }
+
+          // validate the sponsor description length             
+          if (sponsordesc.length > 250) {
+              alert("Sponsor description is invalid. Enter less than 250 characters.");                                        
+              return false;
+          }
+
+          // validate the sponsor description content
+          for (var j = 0; j < sponsordesc.length; j++) {
+            if (("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890. ").indexOf(sponsordesc.charAt(j)) < 0) {                            
+                  alert("Sponsor description should contain only letters, numbers, dots or spaces.");                                        
+                  return false;
+              }
+          }                    
+
+          // hide step1, show step2
+          $("#step1Button").fadeOut("slow");
+          $(".step1").fadeOut("slow");
+          $(".step2").fadeIn("slow");
+          $("#step2Button").fadeIn("slow");
+
+          return false;
+          
+        });  	                                     
+
+        // handle the step2 button
+        $("#step2Button").on( "click", function() {		
+          
+          // hide step2, show step3
+          $("#step2Button").fadeOut("slow");
+          $(".step2").fadeOut("slow");
+          $(".step3").fadeIn("slow");
+          $("#step3Button").fadeIn("slow");
+
+          return false;
+          
+        });  	                                     
+
+        // handle the add question button
+        $("#addButton").on( "click", function() {		
+          
+          // increment the questionDisplay
+          questionDisplay++;
+
+          // validate the question display is between 1 and 30 (max)
+          if (questionDisplay < 1) {
+            questionDisplay = 1;
+            alert("You need to have at least 1 question");
+            $("#qGroup1").show();
+            return false;
+          }
+
+          // validate the question display is between 1 and 35 (max)
+          if (questionDisplay > 35) {
+            questionDisplay = 35;
+            alert("Sorry. Max of 35 questions.");            
+            return false;
+          }
+
+          // show the next question input
+          $("#qGroup" + questionDisplay).show();
+
+          return false;
+          
+        });  	                                     
+
+        // handle the remove question button
+        $("#removeButton").on( "click", function() {		
+          
+          // decrement the questionDisplay
+          questionDisplay--;
+
+          // validate the question display is between 1 and 30 (max)
+          if (questionDisplay < 1) {
+            questionDisplay = 1;
+            alert("You need to have at least 1 question");
+            $("#qGroup1").show();
+            return false;
+          }
+
+          // validate the question display is between 1 and 35 (max)
+          if (questionDisplay > 35) {
+            questionDisplay = 35;
+            alert("Sorry. Max of 35 questions.");            
+            return false;
+          }
+
+          // hide the last question input, clear the val
+          let lastQuestionNo = questionDisplay + 1;
+          $("#qGroup" + lastQuestionNo).hide();
+          $("#question" + lastQuestionNo).val("");
+
+          return false;
+          
+        });  	                                  
+        
+        // handle the step3 button
+        $("#step3Button").on( "click", function() {		
+          
+          // set the inputs
+          let addressCoin = "NOADDRESSCOINSPONSORCHALLENGE9999999999999999999999999999999999999999999999999999999999999";
+          let questions = "";
+          let tempQuestion = "";
+
+          // loop through questions
+          let t = 0;
+          let tNext = 1;
+          while (t < questionDisplay) {
+
+            tempQuestion = $("#question" + tNext).val();
+
+            // check question exists
+            if (!tempQuestion) {
+              alert("Question #" + tNext + " does not have valid text. Please correct and try again.");              
+              return false;
+            }
+
+            // check question has positive length
+            if (tempQuestion.length < 2) {
+              alert("Question #" + tNext + " does not have valid length. Please add some text and try again.");
+              return false;
+            }
+
+            // check only 1 question mark in the text
+            if ((tempQuestion.match(/\?/g) || []).length > 1) {
+              alert("Question #" + tNext + " has more than 1 question mark. Please correct and try again.");
+              return false;
+            }
+
+            // check 1 question mark at the end only 
+            if (tempQuestion.slice(-1) !== "?") {
+              alert("Question #" + tNext + " needs question mark at the end. Please correct and try again.");
+              return false;
+            }
+
+            // sanitize
+            tempQuestion = filterXSS(tempQuestion);
+
+            // append to question string
+            questions = questions + tempQuestion;
+
+            t++;
+            tNext++;
+          }
+
+          // sanitize inputs
+          addressCoin = filterXSS(addressCoin);
+          questions = filterXSS(questions);
+              
+          // check questions exist
+          if (!questions) {
+              alert("There are no questions. Please enter at least 1 question.");                                        
+              return false;
+          }
+          
+          // validate the question length
+          if (questions.length > 2100) {
+              alert("Your questions are too long. They should be less than 2100 characters in total.");                                        
+              return false;
+          }
+          
+          // check coin address exists
+          if (!addressCoin) {
+              alert("Coin address is invalid. Please enter a value.");                                        
+              return false;
+          }
+
+          // validate the address length             
+          if (addressCoin.length !== 90) {
+              alert("Coin address is invalid. Addresses should be 90 characters.");                                        
+              return false;
+          }
+
+          // validate the address content
+          for (var j = 0; j < addressCoin.length; j++) {
+              if (("9ABCDEFGHIJKLMNOPQRSTUVWXYZ").indexOf(addressCoin.charAt(j)) < 0) {                            
+                  alert("Coin address should contain only letters A-Z or the number 9. Address is invalid.");                                        
+                  return false;
+              }
+          }                    
+
+          // show proof work spinners, send to tangle
+          $(".sendQuestions").fadeIn("slow");
+          sendToTangle(addressCoin,questions);          
+
+          return false;
+          
+        });  	                                     
+
+        function sendToTangle(addressCoin,questions) {                          
+
+          // create a list of https nodes          
+          let hostHttps = ['https://nodes.iota.cafe', 'https://node.tangle.works:443', 'https://iota.thathost.net:443'];
+          let portHttps = [443, 443, 443];
+
+          // initialize host and port
+          let host = hostHttps[0];
+          let port = portHttps[0];
+
+          // pull a random https node to rotate usage (if nodes.iota gets overloaded)
+          if (Math.random() > 1) {
+              host = hostHttps[1];
+              port = port[1];
+          }
+
+          // initialize curl library values
+          curl.init();
+          const MAX_TIMESTAMP_VALUE = (Math.pow(3,27) - 1) / 2;
+
+          // instantiate IOTA object
+          var iota = new IOTA({
+              'host': host,
+              'port': port        
+          });                                                            
+          
+          // initialize transfer data
+          let seed = generateSeed();
+          let address = iota.utils.addChecksum(generateSeed());
+          let value = 0;             
+          let message = questions + "???";
+          let tag = "";                       
+          let depth = 10;
+          let weight = 14;
+
+          // WARNING: Not cryptographically secure. Do not use any seeds generated by this generator to actually store any value.
+          function generateSeed() {
+              const validChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ9';
+              return Array.from(new Array(81), (x, i) => validChars[Math.floor(Math.random() * validChars.length)]).join('');
+          }
+          
+          // returns a depth in [4, 12] inclusive
+          function generateDepth() {
+              depth = Math.floor(Math.random() * (12 - 4 + 1)) + 4;
+              return depth;
+          }
+          
+          // adapted from https://github.com/iotaledger/wallet/blob/master/ui/js/iota.lightwallet.js
+          const localAttachToTangle = function(trunkTransaction, branchTransaction, minWeightMagnitude, trytes, callback) {
+
+              $('.step3').fadeOut("slow");
+              $('#step3Button').fadeOut("slow");            
+              $('#loadingText').text("Attaching Answer to Tangle");		
+
+              const ccurlHashing = function(trunkTransaction, branchTransaction, minWeightMagnitude, trytes, callback) {
+                  const iotaObj = iota;
+
+                  $('#loadingText').text("Now Starting Curl Hashing");	                        
+
+                  // inputValidator: Check if correct hash
+                  if (!iotaObj.valid.isHash(trunkTransaction)) {
+                      return callback(new Error("Invalid trunkTransaction"));
+                  }
+
+                  // inputValidator: Check if correct hash
+                  if (!iotaObj.valid.isHash(branchTransaction)) {
+                      return callback(new Error("Invalid branchTransaction"));
+                  }
+
+                  // inputValidator: Check if int
+                  if (!iotaObj.valid.isValue(minWeightMagnitude)) {
+                      return callback(new Error("Invalid minWeightMagnitude"));
+                  }
+
+                  let finalBundleTrytes = [];
+                  let previousTxHash;
+                  let i = 0;
+
+                  function loopTrytes() {
+                      getBundleTrytes(trytes[i], function(error) {
+                          if (error) {
+                              return callback(error);
+                          } else {
+                              i++;
+                              if (i < trytes.length) {
+                                  loopTrytes();
+                              } else {
+                                  // reverse the order so that it's ascending from currentIndex
+                                  return callback(null, finalBundleTrytes.reverse());
+                              }
+                          }
+                      });
+                  }
+
+                  function getBundleTrytes(thisTrytes, callback) {
+                      // PROCESS LOGIC:
+                      // Start with last index transaction
+                      // Assign it the trunk / branch which the user has supplied
+                      // IF there is a bundle, chain  the bundle transactions via
+                      // trunkTransaction together
+
+                      let txObject = iotaObj.utils.transactionObject(thisTrytes);
+                      txObject.tag = txObject.tag || txObject.obsoleteTag;
+                      txObject.attachmentTimestamp = Date.now();
+                      txObject.attachmentTimestampLowerBound = 0;
+                      txObject.attachmentTimestampUpperBound = MAX_TIMESTAMP_VALUE;
+                      // If this is the first transaction, to be processed
+                      // Make sure that it's the last in the bundle and then
+                      // assign it the supplied trunk and branch transactions
+                      if (!previousTxHash) {
+                          // Check if last transaction in the bundle
+                          if (txObject.lastIndex !== txObject.currentIndex) {
+                              return callback(new Error("Wrong bundle order. The bundle should be ordered in descending order from currentIndex"));
+                          }
+
+                          txObject.trunkTransaction = trunkTransaction;
+                          txObject.branchTransaction = branchTransaction;
+                      } else {
+                          // Chain the bundle together via the trunkTransaction (previous tx in the bundle)
+                          // Assign the supplied trunkTransaciton as branchTransaction
+                          txObject.trunkTransaction = previousTxHash;
+                          txObject.branchTransaction = trunkTransaction;
+                      }
+
+                      let newTrytes = iotaObj.utils.transactionTrytes(txObject);
+
+                      curl.pow({trytes: newTrytes, minWeight: minWeightMagnitude}).then(function(nonce) {
+                          var returnedTrytes = newTrytes.substr(0, 2673-81).concat(nonce);
+                          var newTxObject= iotaObj.utils.transactionObject(returnedTrytes);
+
+                          // Assign the previousTxHash to this tx
+                          var txHash = newTxObject.hash;
+                          previousTxHash = txHash;
+
+                          finalBundleTrytes.push(returnedTrytes);
+                          callback(null);
+                      }).catch(callback);
+                  }
+                  loopTrytes()
+              }
+
+              ccurlHashing(trunkTransaction, branchTransaction, minWeightMagnitude, trytes, function(error, success) {
+                  if (error) {
+                      console.log(error);
+                      $('#loadingText').text("Hashing error. Try Starting Over.");	                            
+                  } else {
+                      console.log(success);
+                      $('#loadingText').text("Hashing Succeeded. Let's Move On.");	
+                  }
+                  if (callback) {
+                      return callback(error, success);
+                  } else {
+                      return success;
+                  }
+              })
+          }
+
+          sendMessages(address);                        
+          
+          function sendMessages(address) {
+
+              // using this because of bug with using curl.overrideAttachToTangle()
+              iota.api.attachToTangle = localAttachToTangle;
+              
+              // bundle the transfers for all the tasks 
+              let transfers = [];                    
+
+              transfers.push({
+                  address: address,
+                  value: value,
+                  message: iota.utils.toTrytes(message),
+                  tag: tag
+              });
+                                      
+              $('#loadingText').text("Doing PoW (Proof of Work)");	
+              iota.api.sendTransfer(seed, generateDepth(), weight, transfers, function(error, success){
+                  if (error) {
+                      console.log("error in send transfer, api could be down",error);
+                      $('#loadingText').text("Error Sending Transfer. Try Starting Over.");	
+                      alert("Public Node Could Be Down. Try Again Later.");
+                      return false;
+                  }                  
+                  
+                  // on success, post address/transaction so Capture Coins users can now solve
+                  let transactionHash = success[0]["hash"];
+                  let addressTransaction = success[0]["address"];
+                  postData(addressCoin,transactionHash,addressTransaction);            
+                  
+              })
+          }                                  
+
+        }
+        
+        function postData(addressCoin,transactionHash,addressTransaction) {
+
+            // get the data
+            var address1 = addressCoin;                
+            var transaction = transactionHash;         
+            var address2 = addressTransaction;                       
+            
+            // sanitize
+            address1 = filterXSS(address1);
+            transaction = filterXSS(transaction);
+            address2 = filterXSS(address2);
+            sponsor = filterXSS(sponsor);
+            sponsordesc = filterXSS(sponsordesc);
+
+            // check address exists
+            if (!address1) {
+                $('#loading').hide();
+                $('#loadingText').text("Success. Challenge is Now In the Tangle.");	
+                return false;
+            }
+
+            // validate the address length             
+            if ((address1.length === 90) || (address1.length === 81)) {
+                // do nothing
+            } else {
+                $('#loading').hide();
+                $('#loadingText').text("Success. Challenge is Now In the Tangle.");	
+                return false;
+            }
+
+            // validate the address content
+            for (var j = 0; j < address1.length; j++) {
+                if (("9ABCDEFGHIJKLMNOPQRSTUVWXYZ").indexOf(address1.charAt(j)) < 0) {                            
+                    $('#loading').hide();
+                    $('#loadingText').text("Success. Challenge is Now In the Tangle.");	
+                    return false;
+                }
+            }                    
+
+            // check transaction exists
+            if (!transaction) {
+                $('#loading').hide();
+                $('#loadingText').text("Success. Challenge is Now In the Tangle.");	
+                return false;
+            }
+
+            // validate the transaction length             
+            if (transaction.length !== 81) {
+                $('#loading').hide();
+                $('#loadingText').text("Success. Challenge is Now In the Tangle.");	
+                return false;
+            }
+
+            // validate the transaction content
+            for (var j = 0; j < transaction.length; j++) {
+                if (("9ABCDEFGHIJKLMNOPQRSTUVWXYZ").indexOf(transaction.charAt(j)) < 0) {                            
+                    $('#loading').hide();
+                    $('#loadingText').text("Success. Challenge is Now In the Tangle.");	
+                    return false;
+                }
+            }
+
+            // check address exists
+            if (!address2) {
+                $('#loading').hide();
+                $('#loadingText').text("Success. Challenge is Now In the Tangle.");	
+                return false;
+            }
+
+            // validate the address length             
+            if ((address2.length === 90) || (address2.length === 81)) {
+                // do nothing
+            } else {
+                $('#loading').hide();
+                $('#loadingText').text("Success. Challenge is Now In the Tangle.");	
+                return false;
+            }
+
+            // validate the address content
+            for (var j = 0; j < address2.length; j++) {
+                if (("9ABCDEFGHIJKLMNOPQRSTUVWXYZ").indexOf(address2.charAt(j)) < 0) {                            
+                    $('#loading').hide();
+                    $('#loadingText').text("Success. Challenge is Now In the Tangle.");	
+                    return false;
+                }
+            }                    
+
+            $.ajax({
+                type: "POST",
+                url: 'https://q7po1in1zd.execute-api.us-east-1.amazonaws.com/coinStage',
+                contentType: 'application/json',
+                data: JSON.stringify({                    
+                    'address1': address1,
+                    'transaction': transaction,
+                    'address2': address2,
+                    'sponsor': sponsor,
+                    'sponsordesc': sponsordesc
+                }),
+                success: function(res){
+                    $('#loading').hide();
+                    $('#loadingText').text("Success. Capture Coins Has Received Your Challenge and Will Review It For Publishing.");	
+                },
+                error: function(){
+                    // challenge is in tangle, but error with post
+                    $('#loading').hide();
+                    $('#loadingText').text("Success. Capture Coins Has Received Your Challenge and Will Review It For Publishing.");	
+                }
+            });
+
+            return false;
+             
+        }
+
+    });	
+
+    </script>
+	
+  </body>
+  
+</html>

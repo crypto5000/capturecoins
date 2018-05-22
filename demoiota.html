@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Capture Coins is a skill-based challenge where you answer questions to find a wallet's seed.">
+    <meta name="author" content="Capture Coins">
+
+    <title>Capture the Coins - Demo Challenge</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/portfolio-item.css" rel="stylesheet">
+    <link href="css/modern-business.css" rel="stylesheet">
+    <link href="css/2-col-portfolio.css" rel="stylesheet">      
+    <link rel="icon" href="./img/favicon.ico" />	
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119562302-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-119562302-1');
+    </script>
+        
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="./index.html">Capture Coins</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            Solve the Challenge. Capture the Coins.
+          </li>          
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="intro-header">
+      <div class="container">
+        <div class="intro-message">          
+          <br><br>  
+          <h2 style="padding-bottom:10px;" id="demoWarning">This is a sample demo to show how Capture Coins works. There are no actual iotas stored in the wallet at the answer seed.</h2>                              
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question1">What's a type of roger used to identify pirates on the attack?</h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question2">Who is a famous rapper married to a famous Kim?</h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question3">What was Darth Vader's son's first name?</h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question4">What was the nickname of a NBA basketball great named Julius?</h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question5">What is the last name of a mad money television host?</h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question6">What is the space underneath your nose and above your lip called?</h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question7">How many bottles of beer on the wall?</h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question8">What is an html5 element used to draw graphics?</h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question9">What is the first name of the consort of Queen Elizabeth?</h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question10">Which Jarrett brother played with Miles Davis?</h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question11">What is the last name of American novelist who first worked as an advertising writer?</h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question12">What Chinese martial art is famous for its concept of yin and yang?</h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question13">What controversial book was published in 1955 by a Russian novelist?</h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question14">What is the ninth largest city in the state of Indiana, United States?</h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question15">What famous musician was born in Eisenach?</h2>                    
+          <h2 style="padding-bottom:10px;display:none;" class="question" id="question16">What is a term for running fast and a Fast Runner?</h2>                    
+          <div class="endQuestion" style="display:none;">
+            <h2 style="padding-bottom:10px;display:none;" class="question seedGuess">Your seed guess is:<br><code class="seedGuess" id="seed" style="display:inline-block;word-break:break-all;"></code><h5 class="seedGuess">You would now check the wallet or try again. But for this demo, the wallet is empty. NO IOTAS.</h5></h2>                    
+            <h2 style="padding-bottom:10px;display:none;" class="question seedAnswer">You've finished the demo and were <div id="correct" style="display:inline"></div>. The correct seed is:<br><code class="seedAnswer" style="display:inline-block;word-break:break-all;">JOLLYKANYELUKEDRJCRAMERPHILTRUM99CANVASPHILIPKEITHDELILLOTAICHILOLITAGARYBACHBOLT</code><h5 class="seedAnswer" style="display:none">In a real challenge, the wallet's seed is not revealed to you as shown above.</h5></h2>                    
+          </div>
+            <hr class="intro-divider">          
+          <input type="hidden" val="" id="answer1Text">
+          <input type="hidden" val="" id="answer2Text">
+          <input type="hidden" val="" id="answer3Text">
+          <input type="hidden" val="" id="answer4Text">
+          <input type="hidden" val="" id="answer5Text">
+          <input type="hidden" val="" id="answer6Text">
+          <input type="hidden" val="" id="answer7Text">
+          <input type="hidden" val="" id="answer8Text">
+          <input type="hidden" val="" id="answer9Text">
+          <input type="hidden" val="" id="answer10Text">
+          <input type="hidden" val="" id="answer11Text">
+          <input type="hidden" val="" id="answer12Text">
+          <input type="hidden" val="" id="answer13Text">
+          <input type="hidden" val="" id="answer14Text">
+          <input type="hidden" val="" id="answer15Text">
+          <input type="hidden" val="" id="answer16Text">
+          <ul class="list-inline intro-social-buttons">            
+              <div id="start">                    
+                <button type="submit" class="btn btn-primary" id="warningButton" style="border-style:solid;border-color: #ffffff;"><h3 style="margin-top:5px;">Ok. No Iotas. I'm Ready.</h3></button>                                                                                                        
+              </div>                                 
+              <div class="form-group row formInputs" id="answerGroup" style="display:none">                                                    
+                  <div class="col-lg-12">                  
+                      <input class="form-control" id="answer" style="width:80%;margin: 0 auto;" type="text" value="" placeholder="Enter Answer">
+                  </div>                    
+                  <div class="col-lg-12">
+                    <button type="submit" class="btn btn-primary" id="backButton" style="border-style:solid;border-color: #ffffff;margin-top:10px;margin-right:10px">Back</button>                                                                                                                            
+                    <button type="submit" class="btn btn-primary" id="nextButton" style="border-style:solid;border-color: #ffffff;margin-top:10px;margin-left:10px">Next</button>                                                                                    
+                  </div>                    
+                  <div class="col-lg-12">                  
+                    <h5 style="padding-top:10px;" class="seedGuessShow">Current Seed Guess: <code id="seedShow" style="display:inline-block;word-break:break-all;"></code></h5>                    
+                </div>                    
+              </div>                                 
+              <div class="end" id="seedEnd" style="display:none">                    
+                <button type="submit" class="btn btn-primary" id="seedEndButton" style="border-style:solid;border-color: #ffffff;"><h3 style="margin-top:5px;">Reveal Correct Seed</h3></button>                                                                                                        
+              </div>                                                    
+              <div class="end" id="playReal" style="display:none">                                      
+                <button type="submit" class="btn btn-primary" id="createButton" style="border-style:solid;border-color: #ffffff;width:100%;margin-top:10px"><h3 style="margin-top:5px;">Create a Challenge</h3></button><br>                                                                                                        
+                <button type="submit" class="btn btn-primary" id="returnButton" style="border-style:solid;border-color: #ffffff;width:100%;margin-top:10px"><h3 style="margin-top:5px;">Return to Challenges</h3></button>                                                                                                                  
+              </div>                                                                
+          </ul>                    
+        </div>
+      </div>
+    </header>    
+        
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/xss.js"></script>
+    
+    <!-- Page-Level Demo Scripts -->
+    <script>
+    $(document).ready(function() {        
+        
+        // set up the initial question number, max questions        
+        let questionNumber = 1;
+        let maxQuestion = 16;
+        $(".seedGuessShow").hide(); 
+
+        // handle the start button click
+        $("#start").on( "click", function() {		
+
+            // hide the demo warning
+            $("#demoWarning").fadeOut("slow");
+            $("#start").fadeOut("slow");
+            $(".question").fadeOut("slow");
+            $(".end").fadeOut("slow");
+            $(".endQuestion").fadeOut("slow");
+
+            // show the first question
+            $("#question1").fadeIn("slow");
+            $("#answerGroup").fadeIn("slow");
+
+            return false;
+            
+        });  	                                      
+        
+        // handle the answer being submitted
+        $("#nextButton").on( "click", function() {		
+
+            // hide the demo warning and all questions
+            $("#demoWarning").fadeOut("slow");
+            $("#start").fadeOut("slow");
+            $(".question").fadeOut("slow");
+            $("#answerGroup").fadeOut("slow");
+
+            // validate the answer
+            let currentAnswer = $("#answer").val().trim();
+            currentAnswer = filterXSS(currentAnswer);
+
+            if (!currentAnswer) {
+                alert("Please enter an answer. Answer should contain only letters A-Z or the number 9.");                                        
+                // show question
+                $("#question" + questionNumber).fadeIn("slow");
+                $("#answerGroup").fadeIn("slow");
+                return false;
+            }
+
+            if (currentAnswer.length < 1) {
+                alert("Please enter an answer. Answer should contain only letters A-Z or the number 9.");                                        
+                // show question
+                $("#question" + questionNumber).fadeIn("slow");
+                $("#answerGroup").fadeIn("slow");
+                return false;
+            }
+
+            // validate the answer content
+            for (var j = 0; j < currentAnswer.length; j++) {
+                if (("9ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz").indexOf(currentAnswer.charAt(j)) < 0) {                            
+                    alert("Answer should contain only letters A-Z or the number 9.");                                        
+                    // show question
+                    $("#question" + questionNumber).fadeIn("slow");
+                    $("#answerGroup").fadeIn("slow");
+                    return false;
+                }
+            }
+
+            // set the answer text for current question 
+            $("#answer" + questionNumber + "Text").val(currentAnswer);
+          
+             // set the guess seed
+            let guess = $("#answer1Text").val();
+            guess = filterXSS(guess);
+            let i = 2;
+            while (i <= maxQuestion) {
+              guess = guess + $("#answer" + i + "Text").val();  
+              guess = filterXSS(guess);
+              i++;
+            }              
+            guess = guess.toUpperCase();
+            $("#seed").text(guess); 
+            $("#seedShow").text(guess); 
+
+            if (guess.length > 0) {
+              $(".seedGuessShow").show(); 
+            } else {
+              $(".seedGuessShow").hide(); 
+            }
+
+            // increment the question number
+            questionNumber = questionNumber + 1;
+
+            // check if last question
+            if (questionNumber > maxQuestion) {
+
+              // last question, show guess              
+              $("#answerGroup").fadeOut("slow");
+              $(".endQuestion").fadeIn("slow");
+              $(".seedGuess").fadeIn("slow");
+              $("#seedEnd").fadeIn("slow");
+
+              // check if guess was right or wrong
+              if (guess == "JOLLYKANYELUKEDRJCRAMERPHILTRUM99CANVASPHILIPKEITHDELILLOTAICHILOLITAGARYBACHBOLT") {  
+                $("#correct").text("right");
+              } else {
+                $("#correct").text("wrong");
+              }
+
+            } else {
+
+              // show next question, clear answer
+              $("#question" + questionNumber).fadeIn("slow");
+              $("#answerGroup").fadeIn("slow");
+              $("#answer").val("");
+
+            }
+
+            return false;
+            
+        });  	                     
+
+        // handle the back button
+        $("#backButton").on( "click", function() {		
+
+            // check if first question
+            if (questionNumber <= 1) {
+
+              // set to first question
+              questionNumber = 1;
+
+              // show warning, hide questions
+              $("#demoWarning").fadeIn("slow");
+              $("#start").fadeIn("slow");
+              $(".question").fadeOut("slow");
+              $("#answerGroup").fadeOut("slow");    
+              $(".end").fadeOut("slow");
+
+            } else {
+
+              // check if after last question
+              if (questionNumber >= maxQuestion) {
+
+                // set to last question
+                questionNumber = maxQuestion;
+
+                // hide end
+                $("#demoWarning").fadeOut("slow");
+                $("#start").fadeOut("slow");
+                $(".end").fadeOut("slow");
+                $(".question").fadeOut("slow");
+
+                // show last question
+                $("#question" + questionNumber).fadeIn("slow");
+                $("#answerGroup").fadeIn("slow");
+
+              } else {
+
+                // decrement question
+                questionNumber = questionNumber - 1;
+
+                // clear answer, roll back question
+                $("#answer").val("");
+                $(".question").fadeOut("slow");
+                $("#question" + questionNumber).fadeIn("slow");
+
+              }
+
+            }
+            
+            return false;
+            
+        });  	                                      
+ 
+        // handle the seedEnd button
+        $("#seedEndButton").on( "click", function() {		
+
+            // hide seed
+            $("#seedEnd").fadeOut("slow");
+            $(".seedGuess").fadeOut("slow");
+
+            // show answer
+            $("#playReal").fadeIn("slow");
+            $(".seedAnswer").fadeIn("slow");
+
+            return false;
+            
+        });  	                                             
+
+        // handle the create a challenge
+        $("#createButton").on( "click", function() {		
+
+           // go to create page
+            let url = "./createiota.html";
+            window.location.href = url;            
+
+            return false;
+            
+        });  	                                             
+
+        // handle the return
+        $("#returnButton").on( "click", function() {		
+
+            // go to show challenges
+            let url = "./index.html";
+            window.location.href = url;            
+
+            return false;
+            
+        });  	                                             
+
+    });	
+
+    </script>
+	
+  </body>
+  
+</html>

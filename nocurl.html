@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Capture Coins is a skill-based challenge where you answer questions to find a wallet's seed.">
+    <meta name="author" content="Capture Coins">
+
+    <title>Capture the Coins</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/portfolio-item.css" rel="stylesheet">
+    <link href="css/modern-business.css" rel="stylesheet">
+    <link href="css/2-col-portfolio.css" rel="stylesheet">      
+    <link rel="icon" href="./img/favicon.ico" />	
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119562302-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-119562302-1');
+    </script>
+    
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="./index.html">Capture Coins</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            Solve the Challenge. Capture the Coins.
+          </li>          
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="intro-header">
+      <div class="container">
+        <div class="intro-message">
+          <br><br>          
+          <h2 style="padding-bottom:10px;">Your browser does not support WEBGL2 (which is needed to do Proof of Work). Try switching to Desktop Firefox.</h2>                              
+          <hr class="intro-divider">         
+          <h3 style="display:none;padding-bottom:10px" id="pleaseWait">Please Wait. Fetching Challenges.</h3> 
+          <ul class="list-inline intro-social-buttons" id="mainButtons">            
+            <div class="form-group row">                                                
+                <div class="col-lg-12">                                     
+                    <button type="submit" class="btn btn-primary" id="demoButton" style="border-style:solid;border-color: #ffffff;width:100%;"><h3 style="margin-top:5px;">Take the Demo</h3></button><br>                                                                                                              
+                    <button type="submit" class="btn btn-primary" id="solveButton" style="border-style:solid;border-color: #ffffff;width:100%;margin-top:10px"><h3 style="margin-top:5px;">Solve a Challenge</h3></button>                                   
+                </div>
+            </div>                                                
+          </ul>                              
+          <ul class="list-inline intro-social-buttons">            
+            <div class="form-group row" id="noChallenges" style="display:none">                                                
+              <div class="col-lg-12">
+                <div class='alert alert-danger'>There are no open challenges!</div>                
+                <button type="submit" class="btn btn-primary createButton" style="border-style:solid;border-color: #ffffff;width:100%;margin-top:10px"><h3 style="margin-top:5px;">Help. Create a Challenge</h3></button><br>                                                                                                        
+              </div>                      
+            </div>                                       
+          </ul>                                       
+            <div class="form-group row" id="openChallenges" style="display:none">                                                
+              <div class="col-lg-12">
+                <a href="#" id="challenge0" style="display:none;word-break:break-all;"></a>                                    
+                <a href="#" id="challenge1" style="display:none;word-break:break-all;"></a>                                    
+                <a href="#" id="challenge2" style="display:none;word-break:break-all;"></a>                                    
+                <a href="#" id="challenge3" style="display:none;word-break:break-all;"></a>                                    
+                <a href="#" id="challenge4" style="display:none;word-break:break-all;"></a>                                    
+                <a href="#" id="challenge5" style="display:none;word-break:break-all;"></a>                                    
+                <a href="#" id="challenge6" style="display:none;word-break:break-all;"></a>                                    
+                <a href="#" id="challenge7" style="display:none;word-break:break-all;"></a>                                    
+                <a href="#" id="challenge8" style="display:none;word-break:break-all;"></a>                                    
+                <a href="#" id="challenge9" style="display:none;word-break:break-all;"></a>                                    
+                <a href="#" id="challenge10" style="display:none;word-break:break-all;"></a>                                    
+                <a href="#" id="challenge11" style="display:none;word-break:break-all;"></a>                                    
+                <a href="#" id="challenge12" style="display:none;word-break:break-all;"></a>                                    
+                <a href="#" id="challenge13" style="display:none;word-break:break-all;"></a>                                    
+                <a href="#" id="challenge14" style="display:none;word-break:break-all;"></a>                                    
+                <a href="#" id="challenge15" style="display:none;word-break:break-all;"></a>                                    
+                <a href="#" id="challenge16" style="display:none;word-break:break-all;"></a>                                    
+                <a href="#" id="challenge17" style="display:none;word-break:break-all;"></a>                                    
+                <a href="#" id="challenge18" style="display:none;word-break:break-all;"></a>                                    
+                <a href="#" id="challenge19" style="display:none;word-break:break-all;"></a>                                    
+                <a href="#" id="challenge20" style="display:none;word-break:break-all;"></a>                                                    
+              </div>                                    
+            </div>                                    
+        </div>
+      </div>
+    </header>
+        
+    <!-- Page Content -->
+    <section class="content-section-a" style="padding-bottom:20px" id="faq">
+            
+        <div class="container">        
+            <hr class="intro-divider">          
+            <div class="row text-center">
+            
+                <div class="col-lg-12">
+                    <h3 class="page-header">Frequently Asked Questions:</h3>
+                    <hr class="faq-divider">          
+                    <p>Question: Why do I need webgl2?</p> 
+                    <p>Answer: To send data to the Tangle, you must first do Proof of Work (PoW). PoW requires webgl2 support.</p>
+                    <hr class="faq-divider">          
+                    <p>Question: If I don't have webgl2, can I still solve challenges?</p> 
+                    <p>Answer: Yes. Webgl2 is only required for creating challenges.</p>                    
+                    <hr class="faq-divider">                              
+                    <p>Question: What's a Capture Coins challenge?</p> 
+                    <p>Answer: You answer questions to find a wallet's seed.</p>
+                    <hr class="faq-divider">          
+                    <p>Question: How do I find the right seed?</p> 
+                    <p>Answer: The seed is composed of answers to a set of questions. Try the demo to see how it works.</p>
+                    <hr class="faq-divider">         
+                    <p>Question: Where is the challenge stored?</p> 
+                    <p>Answer: A challenge is completely IOTA-based. The questions are stored in the Tangle as data. The answers (seed) are part of the Tangle's wallet system. The token is inside the wallet.</p>                                    
+                    <hr class="faq-divider">         
+                    <p>Question: Does Capture Coins (itself) create any of the challenges?</p> 
+                    <p>Answer: No. Capture Coins just provides an interface to the Tangle.</p>                                                        
+                    <hr class="faq-divider">          
+                    <p>Question: Does Capture Coins (itself) solve any of the challenges?</p> 
+                    <p>Answer: No. Capture Coins just provides an interface to the Tangle.</p>                                                        
+                    <hr class="faq-divider">                              
+                    <p>Question: Does Capture Coins (itself) provide any iotas for the challenges?</p> 
+                    <p>Answer: No. The challenge creator funds from their own wallet outside of Capture Coins.</p>                                                        
+                    <hr class="faq-divider">          
+                    <p>Question: Does Capture Coins (itself) have any access to the challenge's wallet?</p> 
+                    <p>Answer: No. Only the challenge creator has access to the wallet (unless it's solved).</p>                                                        
+                    <hr class="faq-divider">          
+                    <p>Question: Does Capture Coins (itself) know the solution to the challenges?</p> 
+                    <p>Answer: No. Only the challenge creator knows the seed (unless it's solved).</p>                                                        
+                    <hr class="faq-divider">          
+                    <p>Question: Why should I create a challenge?</p> 
+                    <p>Answer: 1) For fun. 2) As tests for students or kids. 3) Brands can build challenges to promote products. 4) Super advanced CAPTCHAs. 5) To support IOTA. 6) To show you are smarter than others.</p>                  
+                    <hr class="faq-divider">                              
+                    <p>Question: How difficult is it to create a challenge?</p> 
+                    <p>Answer: Not difficult. Just think of words that add up to 81 letters. Then think of questions for each word.</p>                  
+                    <hr class="faq-divider">                              
+                    <p>Question: How long does it take to create a challenge?</p> 
+                    <p>Answer: The most time consuming part is coming up with the questions for each word. When you have the questions, you then upload the data as a transaction into the Tangle. You must also send 1-2 iota to the seed wallet, which can take time to confirm (depending on the Tangle's state).</p>                  
+                    <hr class="faq-divider">                                                  
+                    <p>Question: How is the challenge wallet funded?</p> 
+                    <p>Answer: The challenge creator funds the wallet with 1-2 iota. They use the seed (the challenge's answer) to generate an address from that wallet. Then they transfer iota to that wallet.</p>                  
+                    <hr class="faq-divider">          
+                    <p>Question: What's the funding amount?</p> 
+                    <p>Answer: These are micro amounts. Only 1-2 iotas to make it a net economic loss for hackers to attempt brute force attacks.</p>
+                    <hr class="faq-divider">          
+                    <p>Question: What happens if more than 1 person solves a challenge?</p> 
+                    <p>Answer: It's a race to confirm. But challenges are taken out of circulation once solved.</p>                                                        
+                    <hr class="faq-divider">          
+                    <p>Question: Is the code open source?</p> 
+                    <p>Answer: Yes. It's on github <a href="https://www.github.com/crypto5000/capturecoins">here</a>.</p>                                                        
+                    <hr class="faq-divider">                              
+                    <p>Question: What coins are supported?</p> 
+                    <p>Answer: Currently, just IOTA.</p>
+                </div>
+                
+            </div>            
+            <!-- /.row -->
+          
+        </div>    
+        
+    </section>
+    <!-- /.container -->
+        
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/iota.view.min.js"></script>   
+    <script type="text/javascript" src="js/xss.js"></script>
+    
+    <!-- Page-Level Demo Scripts -->
+    <script>
+    $(document).ready(function() {        
+                
+        // handle the demo button click
+        $("#demoButton").on( "click", function() {		
+
+            // go to demo page            
+            let url = "./demoiota.html";
+            window.location.href = url;            
+
+            return false;
+            
+        });  	                                     
+
+        // handle the create button click
+        $(".createButton").on( "click", function() {		
+          
+          // go to create page
+          let url = "./createiota.html";
+          window.location.href = url;            
+
+          return false;
+          
+        });  	                                     
+
+        // data from the Tangle
+        let fetchArray = [];
+        let question1Array = []; 
+        let question2Array = []; 
+        let link1Array = [];
+        let link2Array = [];
+
+        // validate questions sync with answers
+        if (fetchArray.length !== question1Array.length) {
+          alert('Error: There is a problem with the challenges. Try again later');
+        }
+
+        // validate questions sync with answers
+        if (fetchArray.length !== question2Array.length) {
+          alert('Error: There is a problem with the challenges. Try again later');
+        }
+
+        // cycle through the arrays to link questions with answers
+        let linkCount = 0;
+        while (linkCount < fetchArray.length) {
+          link1Array[fetchArray[linkCount]] = question1Array[linkCount];
+          link2Array[fetchArray[linkCount]] = question2Array[linkCount];
+          linkCount++;
+        }
+
+        // handle the solve button click
+        $("#solveButton").on( "click", function() {		
+
+            let challengeCount = 0;                                  
+
+            // hide the buttons, show please wait            
+            $("#mainButtons").fadeOut("slow");
+            $("#pleaseWait").fadeIn("slow");
+
+            // set up the array of open (unsolved) challenges
+            let openArray = [];
+
+            // set the challenge count
+            if (fetchArray) {
+              challengeCount = fetchArray.length;
+            } else {
+              // show no results
+              $("#pleaseWait").fadeOut("slow");
+              $("#mainButtons").fadeOut("slow");
+              $("#openChallenges").fadeOut("slow");
+              $("#noChallenges").fadeIn("slow");
+              return false;
+            }
+
+            // fetch the balances from the tangle
+            var command = {          
+              'command': 'getBalances',
+              'addresses': fetchArray,        
+              'threshold': 100
+            }
+  
+            $.ajax({
+                  // set preferred full-node for queries here
+                  url: 'https://nodes.iota.cafe:443',
+                  type: 'POST',
+                  dataType: 'json',
+                  headers: {'X-IOTA-API-Version': '1'},
+                  contentType: 'application/json',
+                  data:  JSON.stringify(command),
+                  processData: false,
+                  success: function (datain) {
+                      
+                      // process the results
+                      if ((datain.balances) && (parseInt(datain.balances.length) === challengeCount)) {
+                        
+                        var n = 0;
+                        // cycle through balances
+                        while (n < challengeCount) {
+                          // pull only balances of 1-2 iotas
+                          if ((parseInt(datain.balances[n]) === 1) || (parseInt(datain.balances[n]) === 2)) {
+                              openArray.push(fetchArray[n]);
+                          }
+                          n++
+                        }
+                      
+                        // check if balances are solved already (but not confirmed in tangle yet)
+                        if (openArray.length > 0) {
+                          moveNext(openArray);
+                        } else {
+                          // show no results
+                          $("#pleaseWait").fadeOut("slow");
+                          $("#mainButtons").fadeOut("slow");
+                          $("#openChallenges").fadeOut("slow");
+                          $("#noChallenges").fadeIn("slow");
+                          return false;
+                        }
+
+                      } else {
+          
+                        // show no results
+                        $("#pleaseWait").fadeOut("slow");
+                        $("#mainButtons").fadeOut("slow");
+                        $("#openChallenges").fadeOut("slow");
+                        $("#noChallenges").fadeIn("slow");
+                        return false;
+                      }
+                      
+                  },
+                  error: function(){
+                      
+                      // show no results
+                      $("#pleaseWait").fadeOut("slow");
+                      $("#mainButtons").fadeOut("slow");
+                      $("#openChallenges").fadeOut("slow");
+                      $("#noChallenges").fadeIn("slow");
+                      return false;
+                  }
+            });
+
+        });  	                                     
+                
+        function moveNext(openArray) {      
+
+          // initialize object to start data fetch
+          var iota = new IOTA({
+              'host': 'https://nodes.iota.cafe',
+              'port': 443
+          });
+
+          // set the open addresses
+          var command = {            
+              'addresses': openArray
+          }                        
+          
+          // fetch the data for all transactions involving addresses in tangle
+          iota.api.findTransactionObjects(command, function(e, addressData) {            
+
+              // check that results exist                  
+              if (e) {
+                  
+                  // show no results
+                  $("#pleaseWait").fadeOut("slow");
+                  $("#mainButtons").fadeOut("slow");
+                  $("#openChallenges").fadeOut("slow"); 
+                  $("#noChallenges").fadeIn("slow");              
+                  return false;
+              } else if (!addressData) {                  
+                  
+                  // show no results
+                  $("#pleaseWait").fadeOut("slow");
+                  $("#mainButtons").fadeOut("slow");
+                  $("#openChallenges").fadeOut("slow"); 
+                  $("#noChallenges").fadeIn("slow");              
+                  return false;
+              } else {
+                  
+                  // initialize values                    
+                  var i = 0;                                    
+                  var tempAdress = "";
+                  var balValue = 0;
+
+                  // loop through all transactions for each address                    
+                  while (i < addressData.length) {
+
+                      // set the current values                      
+                      balValue = filterXSS(addressData[i].value);
+                      tempAddress = filterXSS(addressData[i].address);
+
+                      // check if balance has a negative (outgoing) transaction
+                      if (balValue < 0) {                           
+                          // remove from openArray - already solved                          
+                          if (openArray.indexOf(tempAddress) > -1) {
+                            openArray.splice(openArray.indexOf(tempAddress), 1);
+                          }
+                      } 
+                      
+                      i++;
+
+                  }
+
+                  // if valid challenge is found (open and not solved),   
+                  if (openArray.length > 0) {                 
+
+                      // cycle through the addresses
+                      var m = 0;
+                      while (m < openArray.length) {
+                        // display the hash as text, show the result
+                        $("#challenge" + count).text("Challenge: " + filterXSS(openArray[count]));
+                        $("#challenge" + count).show();
+                        m++;
+                      }
+                      
+                      // show results
+                      $("#pleaseWait").fadeOut("slow");
+                      $("#noChallenges").fadeOut("slow");
+                      $("#mainButtons").fadeOut("slow");
+                      $("#openChallenges").fadeIn("slow");              
+                      return false;
+
+                  } else {
+                      
+                      // show no results
+                      $("#pleaseWait").fadeOut("slow");
+                      $("#mainButtons").fadeOut("slow");
+                      $("#openChallenges").fadeOut("slow"); 
+                      $("#noChallenges").fadeIn("slow");              
+                      return false;
+
+                  }                  
+                  
+              }
+
+          });
+
+        }
+        
+        // handle the go to challenge link
+        $(".goLink").on( "click", function() {		
+          
+          // get the challenge address as text
+          let challengeAddress = $(this).text();
+          
+          // parse of the start text
+          challengeAddress = challengeAddress.substring(11);
+
+          // filter for XSS          
+          challengeAddress = filterXSS(challengeAddress);                  
+          
+          // validate the address length             
+          if ((challengeAddress.length === 90) || (challengeAddress.length === 81)) {
+              // do nothing
+          } else {
+              alert("Address is invalid. Addresses should be 90 characters.");                                                            
+              return false;
+          }
+
+          // validate the address content
+          for (var jj = 0; jj < challengeAddress.length; jj++) {
+              if (("9ABCDEFGHIJKLMNOPQRSTUVWXYZ").indexOf(challengeAddress.charAt(jj)) < 0) {                            
+                  alert("Address should contain only letters A-Z or the number 9. Address is invalid.");                                                          
+                  return false;
+              }
+          }          
+
+          // pull the question hashes from the challenge hash
+          let question1Hash = link1Array[challengeHash];
+          let question2Hash = link2Array[challengeHash];
+
+          // filter for XSS
+          question1Hash = filterXSS(question1Hash);                  
+          question2Hash = filterXSS(question2Hash);                  
+          
+          // go to view challenge          
+          let url = "./viewiota.html?q=" + question1Hash + "&r=" + question2Hash;
+          window.location.href = url;            
+
+          return false;
+          
+        });  	                                     
+        
+    });	
+
+    </script>
+	
+  </body>
+  
+</html>
